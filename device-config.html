@@ -48,8 +48,30 @@ $(document).ready(function(){
 			$("#check").show();
 			$("#for").css("visibility", "hidden");
 			$("#check").html("Applied");
+			$("#ip1").val("");
+			$("#ip2").val("");
 		 }
     });
+	$(document).keypress(function(e) {
+    if(e.which == 13) {
+       if($("#ip1").val().match(check)==null)
+		 {
+			$("#ip1").css({'background-color':' #cc0000'})
+		 }
+		 if($("#ip2").val().match(check)==null)
+		 {
+			$("#ip2").css({'background-color':' #cc0000'})
+		 }
+		 if($("#ip1").val().match(check)!=null && $("#ip2").val().match(check)!=null)
+		 {
+			$("#check").show();
+			$("#for").css("visibility", "hidden");
+			$("#check").html("Applied");
+			$("#ip1").val("");
+			$("#ip2").val("");
+		 } 
+    }
+});
 });
 
 });
@@ -84,3 +106,4 @@ $(document).ready(function(){
 </div>
 </body>
 </html>
+
