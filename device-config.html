@@ -45,7 +45,9 @@ $(document).ready(function(){
 		 }
 		 if($("#ip1").val().match(check)!=null && $("#ip2").val().match(check)!=null)
 		 {
-			alert("Applied");
+			$("#check").show();
+			$("#for").css("visibility", "hidden");
+			$("#check").html("Applied");
 		 }
     });
 });
